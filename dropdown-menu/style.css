@@ -42,7 +42,9 @@ button.dropdown::after {
 ol.dropdown {
   list-style: none;
   min-width: 100%;
+  margin: 0;
+  padding: 3px;
   position: absolute;
   left: 0;
-  top: 20px;
+  top: 68px;
 }
