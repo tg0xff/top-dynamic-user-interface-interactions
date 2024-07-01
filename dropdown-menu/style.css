@@ -34,7 +34,9 @@ button.dropdown {
 button.dropdown::after {
   position: absolute;
   content: "▼";
+  font-size: 2rem;
   right: 0;
+  bottom: 12px;
 }
 
 ol.dropdown {
