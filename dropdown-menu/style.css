@@ -6,3 +6,7 @@ body {
   display: grid;
   place-items: center;
 }
+
+ol.dropdown {
+  display: none;
+}
