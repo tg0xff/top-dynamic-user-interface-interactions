@@ -17,4 +17,5 @@ button {
 
 ol.dropdown {
   display: none;
+  list-style: none;
 }
