@@ -48,3 +48,7 @@ ol.dropdown {
   left: 0;
   top: 68px;
 }
+
+ol.dropdown li:hover {
+  background-color: #cfcfcf;
+}
