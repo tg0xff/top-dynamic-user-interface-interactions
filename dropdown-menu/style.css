@@ -8,6 +8,8 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  align-content: center;
+  row-gap: 5px;
 }
 
 button {
@@ -56,4 +58,5 @@ ol.dropdown li:hover {
 
 ol.visible {
   display: block;
+  z-index: 1;
 }
