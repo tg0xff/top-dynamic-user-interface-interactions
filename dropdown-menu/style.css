@@ -54,6 +54,6 @@ ol.dropdown li:hover {
   background-color: #cfcfcf;
 }
 
-.visible {
+ol.visible {
   display: block;
 }
