@@ -40,6 +40,9 @@ button.dropdown::after {
 }
 
 ol.dropdown {
-  display: none;
   list-style: none;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 20px;
 }
