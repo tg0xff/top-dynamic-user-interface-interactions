@@ -41,12 +41,14 @@ class ImageCarousel {
     this.gotoImg(index);
   }
   click(e) {
+    const dataImg = e.target.getAttribute("data-img");
     if (e.target.textContent === ">") {
       this.nextImg();
     } else if (e.target.textContent === "<") {
       this.prevImg();
-    } else if (e.target.getAttribute("data-img")) {
-      this.gotoImg(e.target.getAttribute("data-img"));
+    } else if (dataImg) {
+      const index = parseInt(dataImg, 10)
+      this.gotoImg(index);
     }
   }
 }
