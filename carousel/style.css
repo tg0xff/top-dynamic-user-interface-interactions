@@ -9,3 +9,9 @@ body {
   display: grid;
   place-items: center;
 }
+
+.carousel {
+  border: 1px solid #000;
+  width: 720px;
+  height: 405px;
+}
