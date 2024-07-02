@@ -10,9 +10,13 @@ body {
   place-items: center;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .carousel {
   position: relative;
-  border: 1px solid #000;
   width: 720px;
   height: 405px;
 }
