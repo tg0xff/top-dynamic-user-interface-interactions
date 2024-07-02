@@ -6,11 +6,15 @@ class ImageCarousel {
     this.imgElement = this.element.querySelector("img");
     this.lastImgIndex = 0;
   }
-  gotoImg(index) {
+  updateDots(index) {
     const lastDot = this.element.querySelector(`[data-img="${this.lastImgIndex}"]`);
     lastDot.classList.remove("active");
     const currentDot = this.element.querySelector(`[data-img="${index}"]`);
     currentDot.classList.add("active");
+    this.lastImgIndex = index;
+  }
+  gotoImg(index) {
+    this.updateDots(index);
     this.imgElement.setAttribute("src", this.imgs[index]);
   }
   click(e) {
