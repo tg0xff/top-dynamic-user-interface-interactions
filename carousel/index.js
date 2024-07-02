@@ -5,6 +5,7 @@ class ImageCarousel {
     this.imgs = this.element.getAttribute("data-imgs").split(" ");
     this.imgElement = this.element.querySelector("img");
     this.lastIndex = 0;
+    this.timeout = setTimeout(this.nextImg.bind(this), 3000);
   }
   updateDots(index) {
     const lastDot = this.element.querySelector(
@@ -18,6 +19,8 @@ class ImageCarousel {
   gotoImg(index) {
     this.updateDots(index);
     this.imgElement.setAttribute("src", this.imgs[index]);
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(this.nextImg.bind(this), 3000);
   }
   prevImg() {
     let index = 0;
