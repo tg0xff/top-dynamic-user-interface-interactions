@@ -17,6 +17,15 @@ class ImageCarousel {
     this.updateDots(index);
     this.imgElement.setAttribute("src", this.imgs[index]);
   }
+  prevImg() {
+    let index = 0;
+    if (this.lastImgIndex === 0) {
+      index = this.imgs.length - 1;
+    } else {
+      index = this.lastImgIndex - 1;
+    }
+    this.gotoImg(index);
+  }
   click(e) {
     if (e.target.textContent === ">") {
       this.nextImg();
