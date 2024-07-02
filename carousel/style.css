@@ -63,3 +63,7 @@ img {
   background-color: #bbb;
   cursor: pointer;
 }
+
+.dots div.active {
+  background-color: #fff;
+}
