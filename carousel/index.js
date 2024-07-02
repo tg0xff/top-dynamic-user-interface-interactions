@@ -26,6 +26,15 @@ class ImageCarousel {
     }
     this.gotoImg(index);
   }
+  nextImg() {
+    let index = 0;
+    if (this.lastIndex === (this.imgs.length - 1)) {
+      index = 0;
+    } else {
+      index = this.lastIndex + 1;
+    }
+    this.gotoImg(index);
+  }
   click(e) {
     if (e.target.textContent === ">") {
       this.nextImg();
