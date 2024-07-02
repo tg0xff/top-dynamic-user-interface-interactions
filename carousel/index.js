@@ -1,7 +1,7 @@
 class ImageCarousel {
   constructor(element) {
     this.element = element;
-    this.element.addEventListener("click", this.click);
+    this.element.addEventListener("click", this.click.bind(this));
     this.imgs = this.element.getAttribute("data-imgs").split(" ");
     this.imgElement = this.element.querySelector("img");
     this.lastIndex = 0;
