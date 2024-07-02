@@ -4,14 +4,14 @@ class ImageCarousel {
     this.element.addEventListener("click", this.click)
     this.imgs = this.element.getAttribute("data-imgs").split(" ");
     this.imgElement = this.element.querySelector("img");
-    this.lastImgIndex = 0;
+    this.lastIndex = 0;
   }
   updateDots(index) {
-    const lastDot = this.element.querySelector(`[data-img="${this.lastImgIndex}"]`);
+    const lastDot = this.element.querySelector(`[data-img="${this.lastIndex}"]`);
     lastDot.classList.remove("active");
     const currentDot = this.element.querySelector(`[data-img="${index}"]`);
     currentDot.classList.add("active");
-    this.lastImgIndex = index;
+    this.lastIndex = index;
   }
   gotoImg(index) {
     this.updateDots(index);
@@ -19,10 +19,10 @@ class ImageCarousel {
   }
   prevImg() {
     let index = 0;
-    if (this.lastImgIndex === 0) {
+    if (this.lastIndex === 0) {
       index = this.imgs.length - 1;
     } else {
-      index = this.lastImgIndex - 1;
+      index = this.lastIndex - 1;
     }
     this.gotoImg(index);
   }
