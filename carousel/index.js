@@ -45,3 +45,7 @@ class ImageCarousel {
     }
   }
 }
+
+const carousels = document.querySelectorAll("div.carousel");
+const nodes = [...carousels];
+nodes.forEach((elem) => new ImageCarousel(elem));
