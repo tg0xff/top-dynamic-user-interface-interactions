@@ -1,13 +1,15 @@
 class ImageCarousel {
   constructor(element) {
     this.element = element;
-    this.element.addEventListener("click", this.click)
+    this.element.addEventListener("click", this.click);
     this.imgs = this.element.getAttribute("data-imgs").split(" ");
     this.imgElement = this.element.querySelector("img");
     this.lastIndex = 0;
   }
   updateDots(index) {
-    const lastDot = this.element.querySelector(`[data-img="${this.lastIndex}"]`);
+    const lastDot = this.element.querySelector(
+      `[data-img="${this.lastIndex}"]`,
+    );
     lastDot.classList.remove("active");
     const currentDot = this.element.querySelector(`[data-img="${index}"]`);
     currentDot.classList.add("active");
@@ -28,7 +30,7 @@ class ImageCarousel {
   }
   nextImg() {
     let index = 0;
-    if (this.lastIndex === (this.imgs.length - 1)) {
+    if (this.lastIndex === this.imgs.length - 1) {
       index = 0;
     } else {
       index = this.lastIndex + 1;
